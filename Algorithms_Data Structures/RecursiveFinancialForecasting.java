@@ -8,7 +8,7 @@ class Forecast {
     }
 
     public static void main(String[] args) {
-        double[] growthRates = {1.05, 1.10, 1.07, 1.03};
+        double[] growthRates = {10,25,56,120};
         Double[] memo = new Double[growthRates.length + 1];
         System.out.println("Value after 4 years: " + forecast(growthRates, 4, memo));
     }
