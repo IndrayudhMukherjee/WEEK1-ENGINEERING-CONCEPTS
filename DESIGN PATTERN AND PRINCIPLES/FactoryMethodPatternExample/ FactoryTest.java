@@ -1,12 +1,20 @@
+//File: FactoryTest.java
 package FactoryMethodPatternExample;
 
-class FactoryMethodPatternExample {
+class FactoryTest {
     public static void main(String[] args) {
-        DocumentFactory factory = new PdfFactory();
-        Document doc = factory.createDocument();
+        DocumentFactory factory;
+        Document doc;
+
+        factory = new PdfFactory();
+        doc = factory.createDocument();
         doc.open();
 
         factory = new WordFactory();
+        doc = factory.createDocument();
+        doc.open();
+
+        factory = new ExcelFactory();
         doc = factory.createDocument();
         doc.open();
     }
